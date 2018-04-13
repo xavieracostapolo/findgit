@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Futura';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../utils/futura/futur.ttf'); /* IE9 Compat Modes */
+}
+
+.Inicio {
+    background-color: #009688;
+    width: 100%;
+    height: 100%;
+    /*border-width: thick;
+    border-style: dashed;*/
+}
+
+.Imagen{
+    height: 300px;
+    width: 300px;
+    /*border-width: thick;
+    border-style: dashed;*/
+}
+
+.Formder{
+    width: 50%;
+    height: 85%;
+    float: right;
+    padding-top: 15%;
+    /*border-width: thick;
+    border-style: dashed;*/
+}
+
+.Pulpo{
+    width: 35%;
+    height: 85%;
+    float: left;
+    padding-top: 15%;
+    padding-left: 10%;
+    /*border-width: thick;
+    border-style: dashed;*/
+}
+
+.Btn {
+    position: relative;
+    display: block;
+    margin: 30px auto;
+    padding: 0;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background-color: black;
+    color: blue;
+    transition: background-color .3s;
+  }
+
+  .Btn span {
+    display: block;
+    padding: 24px 60px;
+    font-size: 2em;
+  }
+
+  .Input-text {
+    display: block;
+    margin: 0;
+    padding: 0.8rem 1.6rem;
+    color: inherit;
+    /*width: 50%;*/
+    font-family: inherit;
+    font-size: 2.1rem;
+    font-weight: inherit;
+    line-height: 1.8rem;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background: #fff;
+  }
+
+  .DivCenter{
+      text-align: center;
+      color: white;
+      margin-bottom: 10px;
+      font-size: 4em;
+      font-family: 'Futura';
+  }
+
+  .DivbRight{
+      float: right;
+      padding-right: 10%;
+  }
+  

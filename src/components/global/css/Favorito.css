@@ -1,6 +1,6 @@
 .Panel_favoritos {
-    /*float: left;
-    display: inline-block;*/
+    float: left;
+    /*display: inline-block;*/
     background: #e125e7;
     min-height: 90px;
     height: 90px;

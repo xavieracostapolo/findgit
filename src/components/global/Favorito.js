@@ -7,17 +7,15 @@ class Favorito extends Component {
         const {user, favorito} = this.props;
 
         return (
-            <li>
-                <div className="Panel_favoritos">
-                    <div className="Txt_usuario">
-                        A {user} le gusta:
-                    </div>
-                    <hr />
-                    <div className="Txt_fav">
-                        {favorito}
-                    </div>
+            <div className="Panel_favoritos">
+                <div className="Txt_usuario">
+                    A {user} le gusta:
                 </div>
-            </li>
+                <hr />
+                <div className="Txt_fav">
+                    {favorito}
+                </div>
+            </div>
         );
     }
 }

@@ -3,9 +3,6 @@ import estrella from './images/estrella.svg';
 import './css/Tarjeta.css';
 
 class Tarjeta extends Component {
-    constructor(props){
-        super(props);
-    }
     render() {
         const item = this.props.item;
         const getRepoName = this.props.getRepoName;
@@ -21,11 +18,11 @@ class Tarjeta extends Component {
                 <div className="Repo_estrella">
                     Estrellas: {item.stargazers_count}
                 </div>
-                <div>
-                    <div>
-                        <a href={item.html_url} target="_blank">VISITAR REPO</a>
+                <div className="Btnbar">
+                    <div className="Btnlink">
+                        <a className="BtnLink" href={item.html_url} target="_blank">VISITAR REPO</a>
                     </div>
-                    <div>
+                    <div className="Btnestrella">
                         <input className="btnFav" type="image"  src={estrella} alt="Estrella" onClick={() => getRepoName(item.name)} />
                     </div>
                 </div>

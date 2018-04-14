@@ -3,6 +3,22 @@
   height: 100%
 }
 
+.Content{
+  width: 100%;
+}
+
+.Panel_Favorito{
+  vertical-align: top;
+  width: 25%;
+  float: right;
+}
+
+.Panel_Resultados{
+  vertical-align: top;
+  width: 70%;
+  float: left;
+}
+
 @font-face {
   font-family: 'Futura';
   font-style: normal;
@@ -27,7 +43,6 @@
 .HeaderLeft{
   padding-left: 5%;
   padding-top: 2%;
-  padding-bottom: 2%;
   width: 45%;
   float: left;
   /*border-width: thick;

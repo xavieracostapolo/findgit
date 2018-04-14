@@ -3,13 +3,16 @@ import lupa from './images/lupa.svg';
 import './css/Buscar.css';
 
 import Tarjeta from './Tarjeta';
+import Favorito from './Favorito';
 
 class Buscar extends Component {
     constructor(){
         super();
 
         this.state = {
-            nombre : ''
+            nombre : '',
+            repos : null,
+            favoritos : [],
         }
 
         this.handleClicBuscar = this.handleClicBuscar.bind(this);
@@ -18,10 +21,25 @@ class Buscar extends Component {
     }
 
     componentDidMount(){
-        var nom = JSON.parse(localStorage.data).nombre;
+        var nom, favs;
+        try {
+            nom = JSON.parse(localStorage.data).nombre;
+            if(localStorage.favoritos){
+                favs =  JSON.parse(localStorage.favoritos);
+            } else {
+                favs = [];
+            }
+                
+        } catch (error) {
+            console.log(error);
+            nom = '';
+            favs = [];
+        }
+        
         this.setState({
             nombre : nom,
-            repos: null
+            repos: null,
+            favoritos: favs,
         });
     }
 
@@ -62,10 +80,21 @@ class Buscar extends Component {
     }
 
     getRepoName = (reponame) => {
-        alert(reponame);
+        var favs = this.state.favoritos;
+        favs.push(reponame);
+        this.setState({
+            favoritos : favs
+        });
+        
+        try {
+            localStorage.setItem('favoritos', JSON.stringify(favs));    
+        } catch (error) {
+            console.log(error);
+        }
+        
     }
 
-    render() {
+    render() {           
         return (
             <div className="Container">
                 <div className="Header">
@@ -78,13 +107,22 @@ class Buscar extends Component {
                         <input className="btnBuscar" type="image" src={lupa} alt="Lupa" onClick={this.handleClicBuscar}/>
                     </div>
                 </div>
-                <div>
-                {
-                    this.state.repos &&
-                    this.state.repos.map(item => <Tarjeta key={item.id} item={item} getRepoName={(reponame) => {this.getRepoName(reponame)}} />)
-                }
+                <div className="Content">
+                    <div className="Panel_Resultados">
+                        {
+                            this.state.repos &&
+                            this.state.repos.map(item => <Tarjeta key={item.id} item={item} getRepoName={(reponame) => {this.getRepoName(reponame)}} />)
+                        }
+                    </div>
+                    <div className="Panel_Favorito">
+                        <ul>
+                        {
+                            this.state.favoritos &&
+                            this.state.favoritos.map(item => <Favorito key={item} user={this.state.nombre} favorito={item} />)
+                        }
+                        </ul>
+                    </div>
                 </div>
-
             </div>
         );
     }

@@ -1,5 +1,6 @@
 .Tarjeta_panel {
-    display: inline-block;
+    float: left;
+    /*display: inline-block;*/
     background: #49ecec;
     min-height: 100px;
     height: 200px;
@@ -12,7 +13,6 @@
     padding-bottom: 10px;
     padding-left: 30px;
     padding-right: 30px;
-    float: left;
 }
 
 .Repo_name{
@@ -42,6 +42,7 @@
 .btnFav{
     height: 35px;
     width: 35px;
+    padding-left: 113px;
 }
 
 hr {
@@ -53,4 +54,37 @@ hr {
       border-bottom: 2px solid white;
       box-shadow: 0 20px 20px -20px #333;
     margin: -50px auto 10px; 
+}
+
+.Btnbar {
+    width: 100%;
+}
+
+.Btnlink {
+    vertical-align: middle;
+    width: 45%;
+    float: left;
+}
+
+.BtnLink {
+    position: relative;
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background-color: black;
+    color: blue;
+    transition: background-color .3s;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+.Btnestrella {
+    vertical-align: middle;
+    width: 50%;
+    float: right;
 }

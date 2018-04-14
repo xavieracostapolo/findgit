@@ -1,0 +1,77 @@
+.Container{
+  width: 100%;
+  height: 100%
+}
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../utils/futura/futur.ttf'); /* IE9 Compat Modes */
+}
+
+.Nombre{
+  font-family: 'Futura';
+  color:yellow;
+  font-size: 1.5em;
+}
+
+.HeaderRight{
+  /*border-width: thick;
+  border-style: dashed;*/
+  width: 47%;
+  float: right;
+  padding-top: 2%;
+}
+
+.HeaderLeft{
+  padding-left: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 45%;
+  float: left;
+  /*border-width: thick;
+  border-style: dashed;*/
+}
+
+.TextWelcome{
+  color: white;
+  font-size: 1.5em;
+  font-family: 'Futura';
+}
+
+.Header{
+  background-color: #e91e63;
+  width: 100%;
+  height: 70px;
+}
+
+.btnBuscar{
+  display: inline-block;
+  vertical-align:middle;
+  width: 33px;
+  height: 33px;
+  color: white;
+  background-color: white;
+  padding-top: 2%;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+.Input-textBuscar {
+  display: inline-block;
+  vertical-align:middle;
+  margin: 0;
+  /*padding: 0.8rem 1.6rem;*/
+  color: inherit;
+  /*width: 50%;*/
+  font-family: inherit;
+  font-size: 2.1rem;
+  font-weight: inherit;
+  line-height: 1.8rem;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  background: #fff;
+}

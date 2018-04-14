@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-//import logo from './global/images/logo.svg';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './global/css/App.css';
 
 //Components
-import Inicio from './global/Inicio'
+import Inicio from './global/Inicio';
+import Buscar from './global/Buscar';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Inicio />
-      </div>
+      <Router>
+        <div className="Container">
+          <Route exact path="/" component={Inicio} />
+          <Route path="/buscar" component={Buscar} />
+        </div>
+      </Router>
     );
   }
 }
